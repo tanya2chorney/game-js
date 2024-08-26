@@ -1,18 +1,19 @@
 .header {
   width: 1440px;
   height: 80px;
-  padding: 0px 175px;
-  padding-top: 21px;
+  padding: 21px 0 0 175px;
   display: flex;
   align-items: center;
 }
 
 .nav {
   display: flex;
+  align-items: center;
 }
 
 .list-header {
   display: flex;
+  margin-left: 80px;
 }
 
 .link-dropdown {
@@ -45,6 +46,7 @@
   background: rgb(122, 122, 122);
   border-radius: 30px;
   cursor: pointer;
+  margin-left: 360px;
 }
 
 /* Скрытие реального checkbox */
