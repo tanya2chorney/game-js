@@ -1,0 +1,104 @@
+.header {
+  width: 1440px;
+  height: 80px;
+  padding: 0px 175px;
+  padding-top: 21px;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+}
+
+.list-header {
+  display: flex;
+}
+
+.link-dropdown {
+  background: transparent;
+  color: #555;
+  border-bottom: 1px solid #dde0e7;
+}
+
+.link-item:not(:only-child)::after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(10, 20, 30, 0.4);
+}
+
+.list_item {
+  position: relative;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background: rgb(122, 122, 122);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* Скрытие реального checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Стили для слайдера */
+.slider {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+/* Стили для иконок */
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 18px;
+  transition: opacity 0.4s;
+}
+
+.icon.sun {
+  top: 16px;
+  left: 4px;
+  opacity: 1;
+}
+
+.icon.moon {
+  top: 15.5px;
+  left: -10px;
+  opacity: 0;
+  fill: #fff;
+}
+
+input:checked + .slider {
+  transform: translateX(30px);
+  background-color: #000;
+}
+
+input:checked + .slider .icon.sun {
+  opacity: 0;
+}
+
+input:checked + .slider .icon.moon {
+  opacity: 1;
+}
