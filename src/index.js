@@ -1,2 +1,2 @@
-import { usefulFunction } from '../js/header';
+import {} from '../js/header';
  
