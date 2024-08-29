@@ -17,6 +17,11 @@
   column-gap: 50px;
 }
 
+.dropdown-item:last-child {
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+}
+
 .link-dropdown {
   color: rgb(0, 0, 0);
   font-family: Montserrat Alternates;
@@ -37,11 +42,8 @@
   width: 158.25px;
 }
 
-.dropdown-item:ntn
-
 .link-item {
   color: rgb(0, 0, 0);
-  font-family: Montserrat Alternates;
   font-size: 12px;
   font-weight: 400;
   line-height: 15px;
@@ -52,6 +54,7 @@
   content: ' ▾';
 }
 
+
 .dropdown {
   width: 160px;
   display: none;
@@ -60,12 +63,14 @@
   background: #fff;
   border: 1px solid #000;
   border-top: none;
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 0 0 20px 20px;
 }
 
 .list_item {
   position: relative;
 }
+
+
 
 body {
   transition: background-color 0.4s ease;
