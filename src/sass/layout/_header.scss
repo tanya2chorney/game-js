@@ -1,0 +1,146 @@
+.header {
+  width: 1440px;
+  height: 80px;
+  padding: 21px 0 0 175px;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.list-header {
+  display: flex;
+  margin-left: 80px;
+  column-gap: 50px;
+}
+
+.dropdown-item:last-child {
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+}
+
+.link-dropdown {
+  color: rgb(0, 0, 0);
+  font-family: Montserrat Alternates;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.dropdown-item {
+  width: 160px;
+  height: 35px;
+  text-align: center;
+  padding-top: 7px;
+}
+
+.dropdown-item:hover {
+  background-color: rgb(241, 241, 241);
+  width: 158.25px;
+}
+
+.link-item {
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.link-item:not(:only-child)::after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+
+
+.dropdown {
+  width: 160px;
+  display: none;
+  position: absolute;
+  right: -35px;
+  background: #fff;
+  border: 1px solid #000;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+}
+
+.list_item {
+  position: relative;
+}
+
+
+
+body {
+  transition: background-color 0.4s ease;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background-color: rgb(122, 122, 122);
+  border-radius: 30px;
+  cursor: pointer;
+  margin-left: 360px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 18px;
+  transition: opacity 0.4s;
+}
+
+.icon.sun {
+  top: 16px;
+  left: 4px;
+  opacity: 1;
+}
+
+.icon.moon {
+  top: 15.5px;
+  left: -10px;
+  opacity: 0;
+  fill: #fff;
+}
+
+input:checked + .slider {
+  transform: translateX(30px);
+  background-color: #000;
+}
+
+input:checked + .slider .icon.sun {
+  opacity: 0;
+}
+
+input:checked + .slider .icon.moon {
+  opacity: 1;
+}
+
+.greeting {
+  margin-left: 50px;
+}
+
