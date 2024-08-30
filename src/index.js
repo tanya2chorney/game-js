@@ -1,3 +1,4 @@
-import {} from '../js/header';
-import {} from '../js/switcher';
- 
+import './js/header';
+import './js/switcher';
+import './js/year';
+import './js/number';
