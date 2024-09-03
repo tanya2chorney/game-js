@@ -1,10 +1,10 @@
 const switchInput = document.getElementById('theme-toggle');
-const body = document.body;
+const overlay = document.querySelector(".overlay");
 
 switchInput.addEventListener('change', function() {
     if (this.checked) {
-        body.style.backgroundColor = '#646464';
+        overlay.style.backgroundColor = '#646464';
     } else {
-        body.style.backgroundColor = 'white';
+        overlay.style.backgroundColor = 'white';
     }
 });

@@ -1,3 +1,13 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  transition: background-color 0.4s ease;
+}
+
 .header {
   width: 1440px;
   height: 80px;
@@ -54,7 +64,6 @@
   content: ' ▾';
 }
 
-
 .dropdown {
   width: 160px;
   display: none;
@@ -68,12 +77,6 @@
 
 .list_item {
   position: relative;
-}
-
-
-
-body {
-  transition: background-color 0.4s ease;
 }
 
 .switch {
@@ -143,4 +146,3 @@ input:checked + .slider .icon.moon {
 .greeting {
   margin-left: 50px;
 }
-
