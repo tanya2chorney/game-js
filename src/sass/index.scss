@@ -1,6 +1,8 @@
 @import './common';
-@import './example';
 @import './utils/reset';
 @import './utils/typography';
 @import './utils/variables';
+@import './utils/container';
 @import './layout/header';
+@import './components/year';
+@import './components/number';

@@ -1,0 +1,71 @@
+.year {
+  margin: 35px auto 0;
+  height: 265px;
+  width: 1090px;
+}
+
+.hero-title {
+  font-size: 24px;
+  width: 386px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.year-title::after {
+  content: ' ';
+  display: block;
+  width: 536px;
+  height: 1px;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  top: -50px;
+  left: -110px;
+}
+
+.year-title {
+  margin: 70px auto 0;
+  width: 283px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.year-form {
+  margin: 35px auto;
+  width: 576px;
+  height: 35px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.year-input-text {
+  width: 185px;
+  height: 35px;
+  background-color: $input-background-color-grey;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  padding: 0 10px;
+  box-shadow: 3px 3px #7e7e7e;
+}
+.year-input-text:focus {
+  outline: none;
+}
+
+.year-btn {
+  width: 35px;
+  height: 35px;
+  background-color: $input-background-color-black;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  position: relative;
+  left: -4px;
+  top: 2px;
+  box-shadow: #7e7e7e 3px 3px 0px 0px;
+}
+
+.year-text-result {
+  text-align: end;
+  font-size: 12px;
+  width: 240px;
+}
