@@ -1,26 +1,796 @@
+@charset "UTF-8";
 @import '~node_modules/modern-normalize/modern-normalize.css';
-.example {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  line-height: 1.5;
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1440px;
   background-color: #fff;
-  color: #2f2f37;
-  max-width: 960px;
-  padding: 16px;
+  font-family: "Montserrat Alternates";
+  font-weight: 400;
 }
 
-.example code {
-  font-family: monospace;
+.container {
+  width: 1090px;
+  margin: 0 auto;
+  padding: 0 92px;
+}
+
+.header {
+  width: 1440px;
+  height: 80px;
+  padding: 21px 0 0 175px;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.list-header {
+  display: flex;
+  margin-left: 80px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+
+.dropdown-item:last-child {
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+}
+
+.link-dropdown {
+  color: rgb(0, 0, 0);
+  font-family: Montserrat Alternates;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.dropdown-item {
+  width: 160px;
+  height: 35px;
+  text-align: center;
+  padding-top: 7px;
+}
+
+.dropdown-item:hover {
+  background-color: rgb(241, 241, 241);
+  width: 158.25px;
+}
+
+.link-item {
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.link-item:not(:only-child)::after {
+  padding-left: 4px;
+  content: " ▾";
+}
+
+.dropdown {
+  width: 160px;
+  display: none;
+  position: absolute;
+  right: -35px;
+  background: #fff;
+  border: 1px solid #000;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+}
+
+.list_item {
+  position: relative;
+}
+
+body {
+  transition: background-color 0.4s ease;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background-color: rgb(122, 122, 122);
+  border-radius: 30px;
+  cursor: pointer;
+  margin-left: 360px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 18px;
+  transition: opacity 0.4s;
+}
+
+.icon.sun {
+  top: 16px;
+  left: 4px;
+  opacity: 1;
+}
+
+.icon.moon {
+  top: 15.5px;
+  left: -10px;
+  opacity: 0;
+  fill: #fff;
+}
+
+input:checked + .slider {
+  transform: translateX(30px);
+  background-color: #000;
+}
+
+input:checked + .slider .icon.sun {
+  opacity: 0;
+}
+
+input:checked + .slider .icon.moon {
+  opacity: 1;
+}
+
+.greeting {
+  margin-left: 50px;
+}
+
+.year {
+  margin: 35px auto 0;
+  height: 265px;
+  width: 1090px;
+}
+
+.hero-title {
+  font-size: 24px;
+  width: 386px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.year-title::after {
+  content: " ";
+  display: block;
+  width: 536px;
+  height: 1px;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  top: -50px;
+  left: -110px;
+}
+
+.year-title {
+  margin: 70px auto 0;
+  width: 283px;
   font-size: 16px;
-  font-weight: 700;
-  background-color: #ff6b0a;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 2px;
+  font-weight: 400;
 }
 
-.example .background {
-  height: 240px;
-  background-image: url("../images/logo.png");
-  background-size: cover;
-  background-position: center;
+.year-form {
+  margin: 35px auto;
+  width: 576px;
+  height: 35px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.year-input-text {
+  width: 185px;
+  height: 35px;
+  background-color: #D7D7D7;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  padding: 0 10px;
+  box-shadow: 3px 3px #7e7e7e;
+}
+
+.year-input-text:focus {
+  outline: none;
+}
+
+.year-btn {
+  width: 35px;
+  height: 35px;
+  background-color: #000000;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  position: relative;
+  left: -4px;
+  top: 2px;
+  box-shadow: #7e7e7e 3px 3px 0px 0px;
+}
+
+.year-text-result {
+  text-align: end;
+  font-size: 12px;
+  width: 240px;
+}
+
+.number {
+  margin: 0 auto;
+  height: 165px;
+  width: 1090px;
+}
+
+.number-title::after {
+  content: " ";
+  display: block;
+  width: 536px;
+  height: 1px;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  top: -50px;
+  left: -110px;
+}
+
+.number-title {
+  margin: 0 auto;
+  width: 327px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.number-form {
+  margin: 35px auto;
+  width: 576px;
+  height: 35px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.number-input-text {
+  width: 115px;
+  height: 35px;
+  background-color: #D7D7D7;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  padding: 0 10px;
+  box-shadow: 3px 3px #7e7e7e;
+}
+
+.number-input-text:focus {
+  outline: none;
+}
+
+.number-btn {
+  width: 35px;
+  height: 35px;
+  background-color: #000000;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  position: relative;
+  left: -4px;
+  top: 2px;
+  box-shadow: #7e7e7e 3px 3px 0px 0px;
+}
+
+.number-text-result {
+  text-align: end;
+  font-size: 12px;
+  width: 240px;
+}
+
+/* Copyright 2017 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file.
+ * Extract source code from chromium by congerh. */
+body {
+  --google-blue-600: rgb(26, 115, 232);
+  --google-blue-700: rgb(25, 103, 210);
+  --google-gray-50: rgb(248, 249, 250);
+  --google-gray-500: rgb(154, 160, 166);
+  --google-gray-600: rgb(128, 134, 139);
+  --google-gray-700: rgb(95, 99, 105);
+  background-color: #fff;
+  color: var(--google-gray-700);
+  word-wrap: break-word;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  font-size: 125%;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/* Copyright 2014 The Chromium Authors. All rights reserved.
+   * Use of this source code is governed by a BSD-style license that can be
+   * found in the LICENSE file. */
+.bad-clock button,
+.captive-portal button,
+.main-frame-blocked button,
+.neterror button,
+.offline button,
+.pdf button,
+.ssl button,
+.safe-browsing-billing button {
+  background: var(--google-blue-600);
+}
+
+.error-code {
+  color: #646464;
+  font-size: 0.86667em;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+
+h1 {
+  color: var(--google-gray-900);
+  font-size: 1.6em;
+  font-weight: normal;
+  line-height: 1.25em;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+.interstitial-wrapper {
+  box-sizing: border-box;
+  font-size: 1em;
+  line-height: 1.6em;
+  margin: 14vh auto 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+#main-message > p {
+  display: inline;
+}
+
+@media (max-width: 700px) {
+  .interstitial-wrapper {
+    padding: 0 10%;
+  }
+}
+@media (max-width: 420px) {
+  .interstitial-wrapper {
+    padding: 0 5%;
+  }
+}
+/**
+    * Mobile specific styling.
+    * Navigation buttons are anchored to the bottom of the screen.
+    * Details message replaces the top content in its own scrollable area.
+    */
+/* Fixed nav. */
+@media (min-width: 240px) and (max-width: 420px) and (min-height: 401px), (min-width: 421px) and (min-height: 240px) and (max-height: 560px) {
+  body .nav-wrapper {
+    background: #fff;
+    bottom: 0;
+    box-shadow: 0 -22px 40px #fff;
+    left: 0;
+    margin: 0 auto;
+    max-width: 736px;
+    padding-left: 24px;
+    padding-right: 24px;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  .interstitial-wrapper {
+    max-width: 736px;
+  }
+  #details,
+  #main-content {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 420px) and (orientation: portrait), (max-height: 560px) {
+  body {
+    margin: 0 auto;
+  }
+  #details.hidden,
+  #main-content.hidden {
+    display: block;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding-bottom: 0;
+    transition: none;
+  }
+  h1 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+  }
+  .icon {
+    margin-bottom: 5.69vh;
+  }
+  .interstitial-wrapper {
+    box-sizing: border-box;
+    margin: 7vh auto 12px;
+    padding: 0 24px;
+    position: relative;
+  }
+  .interstitial-wrapper p {
+    font-size: 0.95em;
+    line-height: 1.61em;
+    margin-top: 8px;
+  }
+  #main-content {
+    margin: 0;
+    transition: opacity 100ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+@media (min-width: 421px) and (min-height: 500px) and (max-height: 560px) {
+  .interstitial-wrapper {
+    margin-top: 10vh;
+  }
+}
+@media (min-height: 400px) and (orientation: portrait) {
+  .interstitial-wrapper {
+    margin-bottom: 145px;
+  }
+}
+@media (min-height: 500px) and (max-height: 650px) and (max-width: 414px) and (orientation: portrait) {
+  .interstitial-wrapper {
+    margin-top: 7vh;
+  }
+}
+@media (min-height: 650px) and (max-width: 414px) and (orientation: portrait) {
+  .interstitial-wrapper {
+    margin-top: 10vh;
+  }
+}
+/* Small mobile screens. No fixed nav. */
+@media (max-height: 400px) and (orientation: portrait), (max-height: 239px) and (orientation: landscape), (max-width: 419px) and (max-height: 399px) {
+  .interstitial-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  #main-content {
+    flex: 1 1 auto;
+    order: 0;
+  }
+}
+/* Copyright 2013 The Chromium Authors. All rights reserved.
+   * Use of this source code is governed by a BSD-style license that can be
+   * found in the LICENSE file. */
+/* Don't use the main frame div when the error is in a subframe. */
+html[subframe] #main-frame-error {
+  display: none;
+}
+
+/* Don't use the subframe error div when the error is in a main frame. */
+html:not([subframe]) #sub-frame-error {
+  display: none;
+}
+
+h1 {
+  margin-top: 0;
+  word-wrap: break-word;
+}
+
+h1 span {
+  font-weight: 500;
+}
+
+h2 {
+  color: #666;
+  font-size: 1.2em;
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+a {
+  color: rgb(17, 85, 204);
+  text-decoration: none;
+}
+
+.icon {
+  -webkit-user-select: none;
+  display: inline-block;
+}
+
+.icon-offline {
+  content: -webkit-image-set(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIAQMAAABvIyEEAAAABlBMVEUAAABTU1OoaSf/AAAAAXRSTlMAQObYZgAAAGxJREFUeF7tyMEJwkAQRuFf5ipMKxYQiJ3Z2nSwrWwBA0+DQZcdxEOueaePp9+dQZFB7GpUcURSVU66yVNFj6LFICatThZB6r/ko/pbRpUgilY0Cbw5sNmb9txGXUKyuH7eV25x39DtJXUNPQGJtWFV+BT/QAAAAABJRU5ErkJggg==) 1x, url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQBAMAAAAVaP+LAAAAGFBMVEUAAABTU1NNTU1TU1NPT09SUlJSUlJTU1O8B7DEAAAAB3RSTlMAoArVKvVgBuEdKgAAAJ1JREFUeF7t1TEOwyAMQNG0Q6/UE+RMXD9d/tC6womIFSL9P+MnAYOXeTIzMzMzMzMzaz8J9Ri6HoITmuHXhISE8nEh9yxDh55aCEUoTGbbQwjqHwIkRAEiIaG0+0AA9VBMaE89Rogeoww936MQrWdBr4GN/z0IAdQ6nQ/FIpRXDwHcA+JIJcQowQAlFUA0MfQpXLlVQfkzR4igS6ENjknm/wiaGhsAAAAASUVORK5CYII=) 2x);
+  position: relative;
+}
+
+.icon-disabled {
+  content: -webkit-image-set(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAABICAMAAAAZF4G5AAAABlBMVEVMaXFTU1OXUj8tAAAAAXRSTlMAQObYZgAAASZJREFUeAHd11Fq7jAMRGGf/W/6PoWB67YMqv5DybwG/CFjRuR8JBw3+ByiRjgV9W/TJ31P0tBfC6+cj1haUFXKHmVJo5wP98WwQ0ZCbfUc6LQ6VuUBz31ikADkLMkDrfUC4rR6QGW+gF6rx7NaHWCj1Y/W6lf4L7utvgBSt3rBFSS/XBMPUILcJINHCBWYUfpWn4NBi1ZfudIc3rf6/NGEvEA+AsYTJozmXemjXeLZAov+mnkN2HfzXpMSVQDnGw++57qNJ4D1xitA2sJ+VAWMygSEaYf2mYPTjZfk2K8wmP7HLIH5Mg4/pP+PEcDzUvDMvYbs/2NWwPO5vBdMZE4EE5UTQLiBFDaUlTDPBRoJ9HdAYIkIo06og3BNXtCzy7zA1aXk5x+tJARq63eAygAAAABJRU5ErkJggg==) 1x, url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAACQAQMAAAArwfVjAAAABlBMVEVMaXFTU1OXUj8tAAAAAXRSTlMAQObYZgAAAYdJREFUeF7F1EFqwzAUBNARAmVj0FZe5QoBH6BX+dn4GlY2PYNzGx/A0CvkCIJuvIraKJKbgBvzf2g62weDGD7CYggpfFReis4J0ey9EGFIiEQQojFSlA9kSIiqd0KkFjKsewgRbStEN19mxUPTtmW9HQ/h6tyqNQ8NlSMZdzyE6qkoE0trVYGFm0n1WYeBhduzwbwBC7voS+vIxfeMjeaiLxsMMtQNwMPtuew+DjzcTHk8YMfDknEcIUOtf2lVfgVH3K4Xv5PRYAXRVMtItIJ3rfaCIVn9DsTH2NxisAVRex2Hh3hX+/mRUR08bAwPEYsI51ZxWH4Q0SpicQRXeyEaIug48FEdegARfMz/tADVsRciwTAxW308ehmC2gLraC+YCbV3QoTZexa+zegAEW5PhhgYfmbvJgcRqngGByOSXdFJcLk2JeDPEN0kxe1JhIt5FiFA+w+ItMELsUyPF2IaJ4aILqb4FbxPwhImwj6JauKgDUCYaxmYIsd4KXdMjIC9ItB5Bn4BNRwsG0XM2nwAAAAASUVORK5CYII=) 2x);
+  width: 112px;
+}
+
+.error-code {
+  display: block;
+  font-size: 0.8em;
+}
+
+.hidden {
+  display: none;
+}
+
+#suggestions-list p {
+  margin-block-end: 0;
+}
+
+#suggestions-list ul {
+  margin-top: 0;
+}
+
+.snackbar {
+  background: #323232;
+  border-radius: 2px;
+  bottom: 24px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 0.87em;
+  left: 24px;
+  max-width: 568px;
+  min-width: 288px;
+  opacity: 0;
+  padding: 16px 24px 12px;
+  position: fixed;
+  transform: translateY(90px);
+  will-change: opacity, transform;
+  z-index: 999;
+}
+
+.snackbar-show {
+  -webkit-animation: show-snackbar 0.25s cubic-bezier(0, 0, 0.2, 1) forwards, hide-snackbar 0.25s cubic-bezier(0.4, 0, 1, 1) forwards 5s;
+}
+/* Decrease padding at low sizes. */
+@media (max-width: 640px), (max-height: 640px) {
+  h1 {
+    margin: 0 0 15px;
+  }
+  #content-top {
+    margin: 15px;
+  }
+}
+/* Don't allow overflow when in a subframe. */
+html[subframe] body {
+  overflow: hidden;
+}
+
+#sub-frame-error {
+  -webkit-align-items: center;
+  background-color: #ddd;
+  display: -webkit-flex;
+  height: 100%;
+  -webkit-justify-content: center;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: background-color 0.2s ease-in-out;
+  width: 100%;
+}
+
+#sub-frame-error:hover {
+  background-color: #eee;
+}
+
+#sub-frame-error .icon-generic {
+  margin: 0 0 16px;
+}
+
+#sub-frame-error-details {
+  margin: 0 10px;
+  text-align: center;
+  visibility: hidden;
+}
+
+/* Show details only when hovering. */
+#sub-frame-error:hover #sub-frame-error-details {
+  visibility: visible;
+}
+
+/* If the iframe is too small, always hide the error code. */
+/* TODO(mmenke): See if overflow: no-display works better, once supported. */
+@media (max-width: 200px), (max-height: 95px) {
+  #sub-frame-error-details {
+    display: none;
+  }
+}
+/* Adjust icon for small embedded frames in apps. */
+@media (max-height: 100px) {
+  #sub-frame-error .icon-generic {
+    height: auto;
+    margin: 0;
+    padding-top: 0;
+    width: 25px;
+  }
+}
+/* Offline page */
+.offline {
+  transition: background-color 1.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  will-change: -webkit-filter, background-color;
+}
+
+.offline #main-message > p {
+  display: none;
+}
+
+.offline.inverted {
+  -webkit-filter: invert(100%);
+  background-color: #000;
+}
+
+.offline .interstitial-wrapper {
+  color: #2b2b2b;
+  font-size: 1em;
+  line-height: 1.55;
+  margin: 0 auto;
+  max-width: 600px;
+  padding-top: 100px;
+  width: 100%;
+}
+
+.offline .runner-container {
+  direction: ltr;
+  height: 150px;
+  max-width: 600px;
+  overflow: hidden;
+  position: absolute;
+  top: 35px;
+  width: 44px;
+}
+
+.offline .runner-canvas {
+  height: 150px;
+  max-width: 600px;
+  opacity: 1;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.offline .controller {
+  background: rgba(247, 247, 247, 0.1);
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 9;
+}
+
+#offline-resources {
+  display: none;
+}
+
+@media (max-width: 420px) {
+  .snackbar {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+@media (max-height: 350px) {
+  h1 {
+    margin: 0 0 15px;
+  }
+  .icon-offline {
+    margin: 0 0 10px;
+  }
+  .interstitial-wrapper {
+    margin-top: 5%;
+  }
+}
+@media (min-width: 420px) and (max-width: 736px) and (min-height: 240px) and (max-height: 420px) and (orientation: landscape) {
+  .interstitial-wrapper {
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 360px) and (max-height: 480px) {
+  .offline .interstitial-wrapper {
+    padding-top: 60px;
+  }
+  .offline .runner-container {
+    top: 8px;
+  }
+}
+@media (min-height: 240px) and (orientation: landscape) {
+  .offline .interstitial-wrapper {
+    margin-bottom: 90px;
+  }
+  .icon-offline {
+    margin-bottom: 20px;
+  }
+}
+@media (max-height: 320px) and (orientation: landscape) {
+  .icon-offline {
+    margin-bottom: 0;
+  }
+  .offline .runner-container {
+    top: 10px;
+  }
+}
+@media (max-width: 240px) {
+  .interstitial-wrapper {
+    overflow: inherit;
+    padding: 0 8px;
+  }
+}
+.arcade-mode,
+.arcade-mode .runner-container,
+.arcade-mode .runner-canvas {
+  image-rendering: pixelated;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.arcade-mode #buttons,
+.arcade-mode #main-content {
+  opacity: 0;
+  overflow: hidden;
+}
+
+.arcade-mode .interstitial-wrapper {
+  height: 100vh;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.arcade-mode .runner-container {
+  left: 0;
+  margin: auto;
+  right: 0;
+  transform-origin: top center;
+  transition: transform 250ms cubic-bezier(0.4, 0, 1, 1) 0.4s;
+  z-index: 2;
 }/*# sourceMappingURL=index.css.map */
