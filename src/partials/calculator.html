@@ -1,0 +1,13 @@
+<h1 class="title-calculator">Калькулятор</h1>
+    <div class="calculator">
+        <input class="operand" type="number" id="number1" placeholder="Введіть число">
+        <div class="operations">
+            <button class="operation" onclick="setOperation('+')">+</button>
+            <button class="operation" onclick="setOperation('*')">*</button>
+            <button class="operation" onclick="setOperation('-')">-</button>
+            <button class="operation" onclick="setOperation('/')">/</button>
+        </div>
+        <input class="operand" type="number" id="number2" placeholder="Введіть число">
+        <button class="equal" onclick="calculate()">=</button>
+        <input class="operand" placeholder="Результат" id="result" readonly></input>
+    </div>
