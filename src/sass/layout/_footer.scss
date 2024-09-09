@@ -1,0 +1,79 @@
+.container-footer {
+  padding: 0;
+}
+
+.footer {
+  width: 1440px;
+  height: 220px;
+  background-color: #fff;
+  padding-top: 40px;
+}
+
+.footer-list {
+  display: flex;
+  align-items: center;
+}
+
+.text-footer {
+  color: rgb(0, 0, 0);
+  font-family: Montserrat Alternates;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 170%;
+}
+
+.link-footer {
+  color: rgb(0, 0, 0);
+  font-family: Montserrat Alternates;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 170%;
+}
+
+.footer-item:nth-child(2) {
+  margin-left: 185px;
+  width: 207px;
+}
+.footer-item:last-child {
+  margin-left: 187px;
+}
+
+.input-footer {
+  width: 204px;
+  height: 35px;
+  border-radius: 20px;
+  background: rgb(215, 215, 215);
+  padding: 10px 80px 10px 10px;
+  border: none;
+}
+
+.input-footer::placeholder {
+  color: rgb(126, 126, 126);
+  font-family: Montserrat Alternates;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.btn-form {
+  width: 107px;
+  height: 35px;
+  border-radius: 20px;
+  background: rgb(0, 0, 0);
+  border: none;
+  margin-left: 30px;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat Alternates;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.subscribe {
+  color: rgb(0, 0, 0);
+  font-family: Montserrat Alternates;
+  font-size: 6px;
+  font-weight: 400;
+  line-height: 7px;
+  margin-top: 18px;
+}
