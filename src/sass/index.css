@@ -900,7 +900,6 @@ body.show-modal .modal {
 
 .title-modal {
   color: rgb(0, 0, 0);
-  font-family: Inter;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
@@ -917,6 +916,10 @@ body.show-modal .modal {
   position: absolute;
   top: 30px;
   right: 30px;
+}
+
+.modal-content {
+  font-family: "Montserrat Alternates";
 }
 
 .modal {

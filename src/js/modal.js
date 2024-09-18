@@ -31,19 +31,13 @@ window.addEventListener('click', function (event) {
     modal.style.display = 'none';
   }
 });
-
-// Закрытие по нажатию ESC
 window.addEventListener('keydown', function (event) {
   if (event.key === 'Escape') {
     modal.style.display = 'none';
   }
 });
-
-// Сохранение имени пользователя
 saveNameBtn.addEventListener('click', function () {
   const userName = usernameInput.value.trim();
-
-  // Проверка имени
   if (userName.length < 4) {
     errorMessage.textContent = "Ім'я має містити більше 4 символів!";
   } else {
