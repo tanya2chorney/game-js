@@ -39,9 +39,12 @@
   outline: none;
 }
 .number-result {
+  height: 35px;
+  border-radius: 20px;
+  background-color: black;
   display: block;
   width: 260px;
-  background-color: hsla(0, 0%, 100%, 0);
+  color: #fff;
   border: none;
   font-size: 12px;
   margin: 30px auto 0;
