@@ -4,3 +4,4 @@ import './js/year';
 import './js/number';
 import './js/gameStone';
 import './js/timeCalculator';
+import './js/threeNum';

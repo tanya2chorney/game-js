@@ -1,7 +1,12 @@
+html {
+  width: 1440px;
+}
 body {
+  width: 1090px;
   margin: 0 auto;
   max-width: 1440px;
-  background-image: url(/src/images/background.jpg);
+  background-image: url(/src/images/background.png);
+  background-repeat: no-repeat;
   font-family: 'Montserrat Alternates';
   font-weight: 400;
 }

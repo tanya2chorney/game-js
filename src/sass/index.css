@@ -26,10 +26,16 @@ button {
   padding: 0;
 }
 
+html {
+  width: 1440px;
+}
+
 body {
+  width: 1090px;
   margin: 0 auto;
   max-width: 1440px;
-  background-image: url(/src/images/background.jpg);
+  background-image: url(/src/images/background.png);
+  background-repeat: no-repeat;
   font-family: "Montserrat Alternates";
   font-weight: 400;
 }
@@ -51,7 +57,11 @@ body {
 }
 
 .header {
-  width: 1440px;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  background-color: #fff;
+  width: 1445px;
   height: 80px;
   padding: 21px 0 0 175px;
   display: flex;
@@ -192,8 +202,8 @@ input:checked + .slider .icon.moon {
 
 .year {
   background-color: white;
-  margin: 35px auto 0;
-  height: 265px;
+  margin: 80px auto 0;
+  height: 285px;
   width: 1090px;
 }
 
@@ -201,6 +211,7 @@ input:checked + .slider .icon.moon {
   font-size: 24px;
   width: 386px;
   margin: 0 auto;
+  padding-top: 20px;
   font-weight: 400;
 }
 
@@ -462,4 +473,58 @@ input:checked + .slider .icon.moon {
   margin: 35px auto 0;
   align-items: center;
   justify-content: space-between;
+}
+
+.three-numbers {
+  width: 1090px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 72px 0 0;
+}
+
+.three-numbers-titles {
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 400;
+  width: 141px;
+}
+
+.three-numbers-titles::after {
+  content: " ";
+  display: block;
+  width: 536px;
+  height: 1px;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  top: -50px;
+  left: -184px;
+}
+
+.form-number {
+  display: flex;
+  justify-content: space-between;
+  width: 485px;
+  margin: 35px auto 0;
+}
+
+.input-three-num {
+  width: 137px;
+  height: 35px;
+  background-color: #d7d7d7;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.input-three-num:focus {
+  outline: none;
+}
+
+.number-result {
+  display: block;
+  width: 260px;
+  background-color: hsla(0, 0%, 100%, 0);
+  border: none;
+  font-size: 12px;
+  margin: 30px auto 0;
 }/*# sourceMappingURL=index.css.map */

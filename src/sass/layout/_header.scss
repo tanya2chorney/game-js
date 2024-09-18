@@ -9,7 +9,11 @@
 }
 
 .header {
-  width: 1440px;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  background-color: #fff;
+  width: 1445px;
   height: 80px;
   padding: 21px 0 0 175px;
   display: flex;
