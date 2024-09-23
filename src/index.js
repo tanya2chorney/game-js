@@ -10,3 +10,4 @@ import './js/calc';
 import './js/scientists';
 import './js/modalFooter';
 import './js/modal';
+import './js/team';

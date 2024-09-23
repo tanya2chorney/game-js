@@ -1,0 +1,37 @@
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.student-info {
+    display: inline-block;
+}
+
+.student-photo {
+    width: 150px;
+    height: 150px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+p {
+    color: #666;
+}
