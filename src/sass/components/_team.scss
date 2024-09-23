@@ -6,6 +6,7 @@
 }
 
 .team-slider {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,10 +39,37 @@
   border-radius: 20px;
 }
 
-.arrow-right {
-
+.student-photo {
+  width: 150px;
+  margin: 0 auto;
 }
 
 .arrow-left {
-    
+  position: absolute;
+  left: 0;
+}
+
+.arrow-right {
+  position: absolute;
+  right: 0;
+}
+
+.name-team {
+  color: rgb(0, 0, 0);
+  font-family: Montserrat Alternates;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.info-team {
+  color: rgb(0, 0, 0);
+  font-family: Montserrat Alternates;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: center;
+  margin-top: 20px;
 }
